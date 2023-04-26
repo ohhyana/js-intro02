@@ -35,12 +35,12 @@ function randArray(j) {
 randArray(5);
   
 // removing duplicates from an array
-function compact(arr) {
-    return arr.filter((item, index) => arr.indexOf(item) === index);
+function compact(extraArr) {
+    return extraArr.filter((item, index) => arr.indexOf(item) === index);
   }
   
   const extraArr = [5, 3, 4, 5, 6, 7, 3];
-  const extraArr1 = compact(arr);
+  const extraArr1 = compact(extraArr);
   
 console.log(extraArr1);
   
