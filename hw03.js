@@ -60,10 +60,10 @@ function funcName(arrOld) {
     }
   
     return result;
-  }
+}
   
 const arrOld = [5, "Limit", 12, "a", "3", 99, 2, [2, 4, 3, "33", "a", "text"], "strong", "broun",];
-const arrNew = funcName(arr);
+const arrNew = funcName(arrOld);
 console.log(arrNew);
   
 // arithmetic operations
@@ -83,18 +83,18 @@ console.log(arrNew);
 calc(20, 7, 6); // 27
   
 // finding unique values in array
-function findUnique(arr) {
+function findUnique(arrAdditional) {
     const obj = {};
   
-    for (let i = 0; i < arr.length; i++) {
-      if (obj[arr[i]]) {
+    for (let i = 0; i < arrAdditional.length; i++) {
+      if (obj[arrAdditional[i]]) {
         return false;
       } else {
-        obj[arr[i]] = true;
+        obj[arrAdditional[i]] = true;
       }
     }
   
-    return Object.keys(obj).length === arr.length;
+    return Object.keys(obj).length === arrAdditional.length;
   }
   
-findUnique(arr); // true
+findUnique(arrAdditional); // true
