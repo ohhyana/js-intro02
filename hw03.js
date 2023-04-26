@@ -35,14 +35,14 @@ function randArray(j) {
 randArray(5);
   
 // removing duplicates from an array
-function compact(extraArr) {
-    return extraArr.filter((item, index) => arr.indexOf(item) === index);
-  }
-  
-  const extraArr = [5, 3, 4, 5, 6, 7, 3];
-  const extraArr1 = compact(extraArr);
-  
-console.log(extraArr1);
+function compact(arrExtra) {
+  return arrExtra.filter((item, index) => arrExtra.indexOf(item) === index);
+}
+
+const arrExtra = [5, 3, 4, 5, 6, 7, 3];
+const arrExtra1 = compact(arrExtra);
+
+console.log(arrExtra1);
   
 // separating 2 arrays by numbers and strings
 function funcName(arrOld) {
@@ -83,18 +83,19 @@ console.log(arrNew);
 calc(20, 7, 6); // 27
   
 // finding unique values in array
-function findUnique(arrAdditional) {
+function findUnique(uniqueArr) {
     const obj = {};
   
-    for (let i = 0; i < arrAdditional.length; i++) {
-      if (obj[arrAdditional[i]]) {
+    for (let i = 0; i < uniqueArr.length; i++) {
+      if (obj[uniqueArr[i]]) {
         return false;
       } else {
-        obj[arrAdditional[i]] = true;
+        obj[uniqueArr[i]] = true;
       }
     }
-  
-    return Object.keys(obj).length === arrAdditional.length;
+    
+    return Object.keys(obj).length === uniqueArr.length;
   }
-  
-findUnique(arrAdditional); // true
+
+const uniqueArr = [1, 6, 8, 44, 321];
+console.log(findUnique(uniqueArr)); // true
