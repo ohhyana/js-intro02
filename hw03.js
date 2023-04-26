@@ -50,8 +50,8 @@ function funcName(arrOld) {
   
     for (let i = 0; i < arrOld.length; i++) {
       if (Array.isArray(arrOld[i])) {
-        result[0].push(...arr[i].filter((item) => typeof item !== "string"));
-        result[1].push(...arr[i].filter((item) => typeof item === "string"));
+        result[0].push(...arrOld[i].filter((item) => typeof item !== "string"));
+        result[1].push(...arrOld[i].filter((item) => typeof item === "string"));
       } else if (typeof arrOld[i] === "string") {
         result[1].push(arrOld[i]);
       } else {
